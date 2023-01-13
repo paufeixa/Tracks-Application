@@ -30,17 +30,20 @@ public class AdapterTrack extends RecyclerView.Adapter<AdapterTrack.ViewHolder>{
 
         private TextView title;
         private TextView singer;
+        private TextView id;
         private TextView details;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title);
             singer = itemView.findViewById(R.id.singer);
+            id = itemView.findViewById(R.id.id);
             details = itemView.findViewById(R.id.details);
         }
         void binData(final Track track){
             title.setText(track.getTitle());
             singer.setText(track.getSinger());
+            id.setText(track.getId());
             details.setText("Click to edit the fields");
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

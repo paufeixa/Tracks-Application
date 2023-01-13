@@ -40,7 +40,6 @@ public class AddFragment extends Fragment {
                 progressBarAdd.setVisibility(View.VISIBLE);
                 Api service = Api.retrofit.create(Api.class);
 
-
                 Call<Track> call = service.createTrack(new Track(id.getText().toString(), title.getText().toString(), singer.getText().toString()));
 
                 call.enqueue(new Callback<Track>() {
